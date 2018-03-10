@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion as Integer
-    buildToolsVersion rootProject.ext.buildToolsVersion as String
 
 
     defaultConfig {
@@ -20,6 +19,7 @@ android {
 }
 
 dependencies {
-    compile project(':library')
-    compile "com.android.support:appcompat-v7:${rootProject.supportLibsVersion}"
+    implementation project(':library')
+    implementation "com.android.support:appcompat-v7:${rootProject.supportLibsVersion}"
+    implementation "com.android.support:recyclerview-v7:${rootProject.supportLibsVersion}"
 }
